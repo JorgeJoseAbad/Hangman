@@ -7,7 +7,14 @@
                         "ANGULAR",
                         "REACT",
                         "FUNCTION",
-                        "CALLBACK",];
+                        "CALLBACK",
+                        "ASYNCHRONOUS",
+                        "EXPRESS",
+                        "TYPESCRIPT",
+                        "PROMISES",
+                        "OBJECT",
+                        "METHOD",
+                        "PROPERTY"];
     this.secretWord = "";
     this.letters    = [];
     this.errorsLeft = 10;

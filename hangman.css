@@ -21,7 +21,6 @@
   width: 400px;
 }
 
-/*#hangman div { background: #fff; }*/
 
 .hangman-inicio div {
   background: #555;
@@ -69,8 +68,8 @@
   float: left;
   margin-left: 192px;
   margin-top: -355px;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 }
 
 .hangman-inicio .mouth{
@@ -127,10 +126,10 @@
 #hangman.lifes-3  .right-arm { background: #000; }
 #hangman.lifes-2  .left-leg  { background: #000; }
 #hangman.lifes-1  .right-leg { background: #000; }
-#hangman.lifes-0  .mouth     { border-top : 2px solid #555;
-                              margin-top : -335px !important; }
+#hangman.lifes-0  .mouth     { border-top : 3px solid #555;
+                                margin-top : -335px !important; }
+
 #hangman.saved    .mouth     {border-bottom: 3px solid #000;}
-/*#hangman.lifes-0  .mouth   {  }*/
 
 #currentWord span {
   display: inline-block;

@@ -1,7 +1,6 @@
 window.onload=function(){
-//var hangman;
-    var hangman;
 
+    var hangman;
 
     var newGameClick = function () {
       _initializeControls();
@@ -19,9 +18,8 @@ window.onload=function(){
       document.getElementById("game-over").classList = "hide";
       document.getElementById("hangman").classList   = "";
       document.getElementById("letters").innerHTML   = "";
-      //esto emplea jquery
-      //$('#hangman').remove('.hangman-inicio'); no hacia falta!
-      $('#instructions').hide();
+      document.getElementById("instructions").classList.add('hide');
+
     };
 
     var resetCurrentWord = function () {
