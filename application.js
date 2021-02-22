@@ -6,20 +6,22 @@ window.onload=function(){
     var newGameClick = function () {
       _initializeControls();
       hangman = new Hangman();
-      $('#hangman').remove('.hangman-inicio');
-      $('#instructions').hide();
       drawCurrentWord();
       document.addEventListener("keydown", insertLetter);
     };
 
     document.getElementById("new-game").addEventListener("click", newGameClick);
-    document.addEventListener("keydown", insertLetter);
 
     var _initializeControls = function () {
+      document.addEventListener("keydown", insertLetter);
+
       document.getElementById("you-win").classList   = "hide";
       document.getElementById("game-over").classList = "hide";
       document.getElementById("hangman").classList   = "";
       document.getElementById("letters").innerHTML   = "";
+      //esto emplea jquery
+      //$('#hangman').remove('.hangman-inicio'); no hacia falta!
+      $('#instructions').hide();
     };
 
     var resetCurrentWord = function () {
@@ -56,9 +58,18 @@ window.onload=function(){
         return;
 
       if(status.toLowerCase() === "you win") {
-        document.getElementById("you-win").classList = "";
+          document.getElementById("you-win").classList = "";
+          document.getElementById('hangman').classList = '';
+          document.getElementsByClassName('mouth')[0].classList.remove('hide');
+          document.getElementById('hangman').classList.add('saved');
+          for (i=6; i>=1; i--){
+            document.getElementById('hangman').classList += " lifes-" + i;
+          }
+
       } else {
         drawCurrentWord(hangman.secretWord.split(""));
+        document.getElementById('hangman').classList += " "+"lifes-0";
+        document.getElementsByClassName('mouth')[0].classList.remove('hide');
         document.getElementById("game-over").classList = "";
       }
 
