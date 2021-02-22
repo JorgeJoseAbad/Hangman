@@ -1,8 +1,13 @@
 
-
-
   function Hangman () {
-    this.words      = ["IRONHACK", "NODEJS", "JAVASCRIPT", "METEOR", "ANGULAR"];
+    this.words      = ["IRONHACK",
+                        "NODEJS",
+                        "JAVASCRIPT",
+                        "METEOR",
+                        "ANGULAR",
+                        "REACT",
+                        "FUNCTION",
+                        "CALLBACK",];
     this.secretWord = "";
     this.letters    = [];
     this.errorsLeft = 10;

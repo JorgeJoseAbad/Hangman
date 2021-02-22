@@ -1,4 +1,6 @@
 #main {
+  position: absolute;
+  left:200px;
   margin: 40px auto;
   width: 600px;
 }
@@ -11,11 +13,22 @@
   color: #fff;
   padding: 6px 14px;
   outline: 0;
+  margin:20px;
 }
 
-#hangman div {
-  background: #000;
+#hangman{
+  margin-bottom: 40px;
 }
+
+/*#hangman div { background: #fff; }*/
+
+.hangman-inicio div {
+  background: #555;
+}
+.hangman-inicio .head{
+  border: 2px solid #555;
+}
+
 
 #hangman .base {
   height: 2px;
@@ -41,6 +54,7 @@
 
 #hangman .head {
   background: none;
+
   border-radius: 100%;
   float: left;
   margin-left: 175px;
@@ -81,7 +95,7 @@
   margin-top: -192px;
 }
 
-#hangman div { background: #fff; }
+
 
 /* ... */
 
@@ -104,7 +118,8 @@
 #letters {
   color: #999;
   letter-spacing: 5px;
-  margin: 20px auto 0;
+
+  margin-top: 40px;
   text-align: center;
   width: 400px;
 }
@@ -128,4 +143,15 @@
 
 .hide {
   display: none;
+}
+
+#instructions{
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  background-color: aqua;
+  border: 1px solid red;
+  font-size: 22px;
+  padding: 10px;
+
 }
